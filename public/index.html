@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+
+<style>
+    body {
+        background-color: #121212;
+    }
+
+    .tarj {
+        background-color: #03DAC6;
+    }
+
+    /* Asegurarse que el video ocupe todo el ancho y mantenga su proporción */
+    .full-width-video {
+        width: 100%;
+        height: auto;
+        /* Mantener la proporción original del video */
+        object-fit: cover;
+        /* Si se desea que el video llene completamente el área (sin deformarse) */
+    }
+
+    .full-width-video {
+        width: 100%;
+        height: 80vh;
+        /* 50% de la altura de la ventana */
+        object-fit: cover;
+        /* Asegura que el video cubra todo el espacio sin distorsionarse */
+    }
+
+    /* Opcional: Colocar contenido sobre el video */
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+    }
+    /* Justificar el texto */
+    .justified-text {
+        text-align: justify;
+        font-size: 1.2rem; /* Aumenta el tamaño del texto */
+    }
+
+    /* Ajustar el tamaño del contenedor de texto */
+    .text-container {
+        max-width: 800px; /* Limita el ancho máximo del contenedor de texto */
+        margin: 0 auto; /* Centra el contenedor */
+    }
+    .accordion-button {
+        background-color: #333;
+        color: white;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: #444;
+        color: white;
+    }
+
+    .accordion-body {
+        background-color: #222;
+        color: white;
+    }
+
+    .accordion-header {
+        border-bottom: 1px solid #444;
+    }
+</style>
+
+<body>
+    <!-- MENÚ -->
+
+    <div id="contenedorNav"></div>
+
+
+
+    <!-- slider -->
+
+
+    <video class="full-width-video" autoplay muted loop>
+        <source src="./imag/video.mp4" type="video/mp4">
+
+        Tu navegador no soporta el elemento de video.
+    </video>
+    <!-- CIERRA MENÚ -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="text-center mt-4"></h3>
+
+                <!-- tarjetas -->
+
+                <div class="row">
+                    <div class="col-lg-12 d-flex flex-wrap flex-row justify-content-center" id="contenedor">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- Sección de Bienvenida -->
+<div class="container my-4">
+    <div class="row">
+        <div class="col text-center text-white">
+            <h2>Bienvenido a Nuestra Plataforma de Cursos de Programación</h2>
+            <div class="text-container mt-5">
+                <p class="justified-text">Nuestros cursos sincrónicos te permiten interactuar en vivo con instructores y compañeros, asegurando una experiencia de aprendizaje dinámica y práctica. Todo el contenido del curso se cubre en clase, garantizando que recibas una enseñanza completa y directa. ¡Únete y forma parte de nuestras clases virtuales!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4 text-white">Nuestros Beneficios</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card text-center h-100 shadow">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Acceso de por vida"
+                                class="img-fluid" width="50">
+                        </div>
+                        <h5 class="card-title">Acceso de por vida</h5>
+                        <p class="card-text">Disfruta de acceso ilimitado para aprender a tu ritmo y repasar cuando lo
+                            necesites.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card text-center h-100 shadow">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <img src="https://cdn-icons-png.flaticon.com/128/11139/11139836.png" alt="Certificados"
+                                class="img-fluid" width="50">
+                        </div>
+                        <h5 class="card-title">Certificados al finalizar</h5>
+                        <p class="card-text">Obtén un certificado oficial para demostrar tus habilidades en tu CV o
+                            LinkedIn.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card text-center h-100 shadow">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2594/2594632.png" alt="Clases prácticas"
+                                class="img-fluid" width="50">
+                        </div>
+                        <h5 class="card-title">Clases prácticas</h5>
+                        <p class="card-text">Aprende programando con proyectos interactivos aplicables a situaciones
+                            reales.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card text-center h-100 shadow">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Mentores expertos"
+                                class="img-fluid" width="50">
+                        </div>
+                        <h5 class="card-title">Mentores expertos</h5>
+                        <p class="card-text">Aprende de profesionales de la industria comprometidos con tu éxito.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container my-4">
+        <h2 class="text-center mb-5 text-white">Cursos Destacados</h2>
+        <div class="row">
+            <!-- Curso 1 -->
+            <div class="col-md-4">
+                <div class="tarj card mb-5">
+                    <div class="card-body">
+                        <h5 class="card-title">Curso de Introducción a Python</h5>
+                        <p class="card-text">Aprende los fundamentos de Python, uno de los lenguajes de programación más
+                            populares.</p>
+                        <p class="card-text"><small class="text-muted">Duración: 6 semanas</small></p>
+                        <a href="#" class="btn btn-outline-dark">Más información</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Curso 2 -->
+            <div class="col-md-4">
+                <div class="tarj card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Desarrollo Web con HTML y CSS</h5>
+                        <p class="card-text">Construye sitios web dinámicos y atractivos utilizando HTML y CSS</p>
+                        <p class="card-text"><small class="text-muted">Duración: 8 semanas</small></p>
+                        <a href="#" class="btn btn-outline-dark">Más información</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Curso 3 -->
+            <div class="col-md-4">
+                <div class="tarj card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Curso de C++</h5>
+                        <p class="card-text">Domina C++ y crea aplicaciones de alto rendimiento con este curso intensivo
+                            de 10 semanas.</p>
+                        <p class="card-text"><small class="text-muted">Duración: 10 semanas</small></p>
+                        <a href="#" class="btn btn-outline-dark">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container my-5">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <h2 class="text-center mb-5 text-white">Preguntas Frecuentes</h2>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        ¿Qué necesito para comenzar un curso?
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Solo necesitas una computadora con conexión a Internet. Algunos cursos
+                        pueden requerir software específico, pero te lo indicaremos al inicio. </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        ¿Ofrecen certificados al finalizar los cursos?
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Sí, todos nuestros cursos incluyen un certificado digital que podrás
+                        descargar una vez completes todas las lecciones y actividades.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        ¿Cuánto tiempo tengo acceso a los cursos?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">El acceso a nuestros cursos es limitado a la duración del curso
+                        sincrónico. Una vez que el curso finaliza, el contenido no estará disponible para su
+                        visualización posterior. Te recomendamos participar activamente durante las clases virtuales
+                        para aprovechar al máximo la experiencia de aprendizaje en vivo.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        ¿Necesito conocimientos previos para los cursos?
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Nuestros cursos están divididos en nivel básico y nivel avanzado. El
+                        nivel básico no requiere conocimientos previos, por lo que es ideal para quienes están
+                        comenzando en el tema. Una vez que completes el nivel básico, podrás acceder al nivel avanzado,
+                        que es el siguiente paso en tu aprendizaje. Para ingresar al nivel avanzado, es necesario haber
+                        completado el nivel básico. Si no has tomado el curso básico, también tienes la opción de rendir
+                        un examen para demostrar que tienes los conocimientos necesarios para acceder al nivel avanzado.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        ¿Cuáles son los métodos de pago disponibles?
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Aceptamos pagos mediante tarjeta de crédito, débito y otros métodos de
+                        pago en línea, como PayPal y transferencia bancaria.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                        ¿Cómo puedo acceder a las clases virtuales?
+                    </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Las clases virtuales se realizan a través de videoconferencias.
+                        Recibirás un enlace a la plataforma en la que se llevará a cabo la clase antes de cada sesión.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                        ¿Puedo hacer preguntas durante las clases?
+                    </button>
+                </h2>
+                <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Sí, durante las clases sincrónicas podrás hacer preguntas a los
+                        instructores en tiempo real. Fomentamos un ambiente interactivo y participativo.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                        ¿Puedo acceder a los materiales de clase después de la sesión?
+                    </button>
+                </h2>
+                <div id="flush-collapseEight" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">No, dado que los cursos son sincrónicos, los materiales solo estarán
+                        disponibles durante la clase. Es recomendable que tomes notas durante las sesiones.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                        ¿Qué pasa si no puedo asistir a una clase?
+                    </button>
+                </h2>
+                <div id="flush-collapseNine" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Dado que los cursos son sincrónicos, te recomendamos asistir a todas las
+                        clases. Si no puedes, te sugerimos comunicarte con el instructor para obtener recomendaciones
+                        sobre el contenido perdido.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                        ¿Cómo puedo inscribirme a los cursos?
+                    </button>
+                </h2>
+                <div id="flush-collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Para inscribirte, simplemente visita nuestra página web, selecciona el
+                        curso que te interesa y sigue los pasos para realizar la inscripción y el pago.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="contenedorFooter">
+
+    </div>
+
+
+    <script type="module" src="./scr/index.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

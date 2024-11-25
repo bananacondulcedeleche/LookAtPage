@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modificar Contraseña</title>
+  <!-- Enlace a Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      height: 100vh;  /* Aseguramos que el body ocupe toda la altura */
+      display: flex;  /* Usamos flexbox */
+      justify-content: center;  /* Centrado horizontal */
+      align-items: center;  /* Centrado vertical */
+    }
+    .login-container {
+      max-width: 400px;
+      background-color: #1e1e1e;
+      padding: 60px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-login {
+      background-color: #03DAC6;
+      color: white;
+    }
+    .btn-login:hover {
+      background-color: #05b2a0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Formulario de Login -->
+  <div class="login-container">
+    <h2 class="text-center mb-4">Modificar Contraseña</h2>
+    <form action="#" method="POST">
+      <!-- Usuario -->
+      <div class="mb-3">
+        <label for="usuario" class="form-label">Usuario</label>
+        <input type="text" class="form-control" id="usuario" placeholder="Ingrese su usuario" required>
+      </div>
+      <!-- Contraseña -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Nueva Contraseña</label>
+        <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+      </div>
+      <!-- Botón de Iniciar sesión -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-login w-100">Modificar Contraseña</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Enlace a Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
