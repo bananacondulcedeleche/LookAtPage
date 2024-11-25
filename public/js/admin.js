@@ -1,5 +1,5 @@
-const endpoint = 'https://lookat.onrender.com/productos'
-// const endpoint = 'http://localhost:3000/productos'
+
+const endpoint = '/productos'
 
 mostrarMensaje = (mensaje) => {
   document.querySelector('#contMensaje').innerHTML = mensaje

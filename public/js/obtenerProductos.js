@@ -1,5 +1,5 @@
-fetch('https://lookat.onrender.com/productos')
-// fetch('http://localhost:3000/productos')
+
+fetch('/productos')
 .then (respuesta => respuesta.json())
 // .then (datos => console.log (datos))
 .then (datos => mostrarProductos(datos))

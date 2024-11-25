@@ -22,9 +22,8 @@ const navbar = `
                     </li>
                 </ul>
 
-                <button id="ingresarBtn" class="texto-menu btn btn-outline-success" type="button">Ingresar</button>
-
-
+                <button id="ingresarBtn" class="btn btn-outline-success" type="button" onclick="window.location.href='login.html'">Ingresar</button>
+                <div id="userDisplay" style="color: #03DAC6; display: none; margin-left: 10px;"></div>  
 
                 <!-- Contenedor para los nuevos botones -->
 
@@ -74,3 +73,58 @@ const navbar = `
 `
 
 export { navbar }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+              
+
+
