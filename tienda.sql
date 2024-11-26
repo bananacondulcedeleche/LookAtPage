@@ -39,8 +39,8 @@ CREATE TABLE `productos` (
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`id`, `imagen`, `titulo`, `descripcion`, `precio`) VALUES
-(4, './imag/java.jpg', 'hhdw', '3', 3);
+-- INSERT INTO `productos` (`id`, `imagen`, `titulo`, `descripcion`, `precio`) VALUES
+-- (4, './imag/java.jpg', 'hhdw', '3', 3);
 
 -- --------------------------------------------------------
 
@@ -51,7 +51,7 @@ INSERT INTO `productos` (`id`, `imagen`, `titulo`, `descripcion`, `precio`) VALU
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
-  `mail` varchar(100) NOT NULL,
+  -- `mail` varchar(100) NOT NULL,
   `contrasenia` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -59,9 +59,9 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `nombre`, `mail`, `contrasenia`) VALUES
-(1, 'valen', 'valen@gmail.com', '1212'),
-(2, 'male', 'male@gmail.com', '1010');
+-- INSERT INTO `usuario` (`id`, `nombre`, `mail`, `contrasenia`) VALUES
+-- (1, 'admin', 'admin@gmail.com', '1212'),
+-- (2, 'male', 'male@gmail.com', '1010');
 
 --
 -- Índices para tablas volcadas
@@ -78,7 +78,7 @@ ALTER TABLE `productos`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`,`mail`);
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas

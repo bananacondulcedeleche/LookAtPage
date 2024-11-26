@@ -2,7 +2,9 @@
 const endpoint = '/productos'
 
 mostrarMensaje = (mensaje) => {
-  document.querySelector('#contMensaje').innerHTML = mensaje
+  if(mensaje){
+    document.querySelector('#contMensaje').innerHTML = mensaje
+  }
 }
 // Event listener para el botón "Añadir Producto"
 document.getElementById('añadir').addEventListener('click', function () {

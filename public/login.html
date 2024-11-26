@@ -78,7 +78,7 @@
       e.preventDefault(); // Evita que el formulario se envíe de la forma tradicional
 
       // Obtén los valores del formulario
-      const usuario = document.getElementById('usuario').value;
+      const nombre = document.getElementById('usuario').value;
       const contrasenia = document.getElementById('contrasenia').value;
 
       // Realiza una solicitud POST al backend
@@ -87,12 +87,13 @@
           headers: {
               'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ usuario, contrasenia })
+          body: JSON.stringify({ nombre, contrasenia })
       })
       .then(response => response.json())
       .then(data => {
           if (data.success) {
               // Si el login es exitoso, guarda el usuario en el localStorage
+              localStorage.setItem('id', data.id);
               localStorage.setItem('usuario', data.usuario);
 
               // Muestra el mensaje de bienvenida y configura la redirección
@@ -109,22 +110,22 @@
   document.addEventListener("DOMContentLoaded", function () {
       const usuario = localStorage.getItem("usuario");
       if (usuario) {
-          showWelcomeMessage(usuario);
+          // showWelcomeMessage(usuario);
       }
   });
 
   function showWelcomeMessage(usuario) {
       // Muestra el mensaje de bienvenida al usuario
-      document.querySelector(".login-container").innerHTML = `
-          <h2>Bienvenido, ${usuario}!</h2>
-          <p>¡Has iniciado sesión exitosamente!</p>
-          <button onclick="window.location.href='administracion.html'" class="btn btn-outline-danger">
-          Ir a Administración</button>
-      `;
+      // document.querySelector(".login-container").innerHTML = `
+      //     <h2>Bienvenido, ${usuario}!</h2>
+      //     <p>¡Has iniciado sesión exitosamente!</p>
+      //     <button onclick="window.location.href='administracion.html'" class="btn btn-outline-danger">
+      //     Ir a Administración</button>
+      // `;
 
       setTimeout(() => {
           window.location.href = 'index.html'; 
-      }, 3000); 
+      }, 1000); 
   }
 </script>
 

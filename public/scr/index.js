@@ -1,9 +1,15 @@
-import { navbar } from './navbar.js';
+import { navbarUser, navbarAdmin } from './navbar.js';
 import { footer } from './footer.js';
 
 
 // Agregar el navbar
-document.querySelector(`#contenedorNav`).innerHTML = navbar;
+const usuario = localStorage.getItem('usuario');
+if(usuario.toLowerCase() == 'admin'){
+    document.querySelector(`#contenedorNav`).innerHTML = navbarAdmin;
+}else{
+    document.querySelector(`#contenedorNav`).innerHTML = navbarUser;
+}
+
 
 // Agregar el footer
 document.querySelector(`#contenedorFooter`).innerHTML = footer;
@@ -36,4 +42,36 @@ salirBtn.addEventListener('click', function() {
     newButtonsContainer.style.display = 'none'; // Oculta los botones de usuario
     userDisplay.style.display = 'none'; // Oculta el nombre del usuario
     ingresarBtn.style.display = 'block'; // Muestra el botón "Ingresar"
+});
+
+document.getElementById('eliminarCuenta').addEventListener('click', function () {
+   
+    // Mostrar un cuadro de diálogo de confirmación
+    const confirmacion = confirm("¿Estás seguro de que quieres eliminar tu cuenta?");
+
+    if (confirmacion) {
+        const id = localStorage.getItem('id');
+        if(!id){
+             alert("No se encontro un id a eliminar");   
+             return;
+        }
+        const requestOptions = {
+            method: "DELETE",
+            redirect: "follow" 
+        };
+        fetch("http://localhost:3000/usuario/" + id, requestOptions)
+            .then((response) => response.text())
+            .then((result) => {
+                console.log(result);
+                // Eliminar el id y el usuario del localStorage
+                localStorage.removeItem('id');
+                localStorage.removeItem('usuario');
+                // Recargar la página
+                window.location.reload();
+            })
+            .catch((error) => console.error(error));
+    } else {
+        // Si el usuario cancela, no se hace nada
+        console.log("Eliminación de cuenta cancelada");
+    }
 });
