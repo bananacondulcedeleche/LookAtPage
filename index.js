@@ -3,6 +3,7 @@ const express = require('express');
 const fs = require('fs'); // Permite trabajar con archivos (file system) incluida con node, no se instala
 const cors = require('cors');
 require('dotenv/config');
+const path = require('path');
 const baseDatos = require('./baseDatos/conexion');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -10,7 +11,8 @@ const bcrypt = require('bcrypt');
 
 // Middleware
 app.use(express.json());
-app.use(express.static('./public')); // Ejecuta directamente el front al correr el servidor
+// app.use(express.static('./public')); // Ejecuta directamente el front al correr el servidor
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
 // Endpoint para obtener todos los productos
