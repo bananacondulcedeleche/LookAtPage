@@ -4,12 +4,18 @@ import { footer } from './footer.js';
 
 // Agregar el navbar
 const usuario = localStorage.getItem('usuario');
-if(usuario.toLowerCase() == 'admin'){
-    document.querySelector(`#contenedorNav`).innerHTML = navbarAdmin;
-}else{
-    document.querySelector(`#contenedorNav`).innerHTML = navbarUser;
-}
+const contenedorNav = document.querySelector('#contenedorNav');
 
+if (!usuario) {
+    contenedorNav.innerHTML = navbarUser;
+} else {
+    const usuarioLower = usuario.toLowerCase();
+    if (usuarioLower === 'admin') {
+        contenedorNav.innerHTML = navbarAdmin;
+    } else {
+        contenedorNav.innerHTML = navbarUser;
+    }
+}
 
 // Agregar el footer
 document.querySelector(`#contenedorFooter`).innerHTML = footer;
