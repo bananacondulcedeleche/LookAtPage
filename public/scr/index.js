@@ -43,7 +43,7 @@ function mostrarUsuarioEnNavbar(usuario) {
 }
 
 // Lógica para el botón "Salir"
-salirBtn.addEventListener('click', function() {
+salirBtn.addEventListener('click', function () {
     localStorage.removeItem('usuario'); // Elimina el usuario del localStorage
     newButtonsContainer.style.display = 'none'; // Oculta los botones de usuario
     userDisplay.style.display = 'none'; // Oculta el nombre del usuario
@@ -51,21 +51,26 @@ salirBtn.addEventListener('click', function() {
 });
 
 document.getElementById('eliminarCuenta').addEventListener('click', function () {
-   
+
     // Mostrar un cuadro de diálogo de confirmación
     const confirmacion = confirm("¿Estás seguro de que quieres eliminar tu cuenta?");
 
     if (confirmacion) {
         const id = localStorage.getItem('id');
-        if(!id){
-             alert("No se encontro un id a eliminar");   
-             return;
+        if (!id) {
+            alert("No se encontro un id a eliminar");
+            return;
         }
         const requestOptions = {
             method: "DELETE",
-            redirect: "follow" 
+            redirect: "follow"
         };
-        fetch("http://localhost:3000/usuario/" + id, requestOptions)
+
+        const protocolo = window.location.protocol;
+        const host = window.location.host;
+        const url = protocolo + '//' + host + '/usuario/' + id;
+
+        fetch(url, requestOptions)
             .then((response) => response.text())
             .then((result) => {
                 console.log(result);

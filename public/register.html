@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,7 @@
       justify-content: center;
       align-items: center;
     }
+
     .register-container {
       max-width: 500px;
       background-color: #1e1e1e;
@@ -23,33 +25,41 @@
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+
     .register-container h2 {
       margin-bottom: 30px;
     }
+
     .btn-register {
       background-color: #03DAC6;
       color: white;
     }
+
     .btn-register:hover {
       background-color: #05b2a0;
     }
+
     .login-link {
       display: block;
       text-align: center;
       margin-top: 15px;
     }
+
     .login-link a {
       color: #007bff;
       text-decoration: none;
     }
+
     .login-link a:hover {
       text-decoration: underline;
     }
+
     .form-label {
       font-size: 14px;
     }
   </style>
 </head>
+
 <body>
 
   <!-- Formulario de Crear Cuenta -->
@@ -113,8 +123,12 @@
       const nombre = document.getElementById('nombre').value;
       const contrasenia = document.getElementById('password').value;
 
+      const protocolo = window.location.protocol;
+      const host = window.location.host;
+      const url = protocolo + '//' + host + '/usuario';
+
       // Realiza una solicitud POST al backend
-      fetch('http://localhost:3000/usuario', {
+      fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -127,7 +141,7 @@
             // Si el login es exitoso, guarda el usuario en el localStorage
             localStorage.setItem('id', data.id);
             localStorage.setItem('usuario', data.nombre);
-          
+
 
             // Muestra el mensaje de bienvenida y configura la redirección
             showWelcomeMessage(data.nombre);
@@ -155,7 +169,7 @@
       //     <button onclick="window.location.href='administracion.html'" class="btn btn-outline-danger">
       //     Ir a Administración</button>
       // `;
-      alert("Se creó el usuario: "+nombre)
+      alert("Se creó el usuario: " + nombre)
       setTimeout(() => {
         window.location.href = 'index.html';
       }, 1000);
@@ -165,4 +179,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

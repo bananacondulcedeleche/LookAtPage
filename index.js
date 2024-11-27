@@ -13,14 +13,8 @@ const bcrypt = require('bcrypt');
 app.use(express.json());
 // app.use(express.static('./public')); // Ejecuta directamente el front al correr el servidor
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors({
-    origin: '*', 
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS', 
-    allowedHeaders: 'Content-Type,Authorization', 
-    credentials: true, 
-    optionsSuccessStatus: 204 
-  }));
 
+app.use(cors());
 // Endpoint para obtener todos los productos
 app.get('/productos', (req, res) => {
     const sql = "SELECT * FROM productos";
