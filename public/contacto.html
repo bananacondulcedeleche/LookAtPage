@@ -7,6 +7,57 @@
     <title>Contacto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #121212; /* Fondo oscuro */
+            color: white; /* Texto blanco */
+        }
+
+        form {
+            background-color: #1e1e1e; /* Fondo del formulario */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .form-label,
+        .form-check-label {
+            color: white; /* Color blanco para etiquetas */
+        }
+
+        .form-control {
+            background-color: #1e1e1e; /* Fondo del input */
+            color: white; /* Texto blanco dentro del input */
+            border: 1px solid #555; /* Borde del input */
+        }
+
+        .form-control::placeholder {
+            color: white; /* Placeholder blanco */
+        }
+
+        .form-select {
+            background-color: #1e1e1e; /* Fondo del select */
+            color: white; /* Texto blanco del select */
+            border: 1px solid #555; /* Borde del select */
+        }
+
+        .form-check-input {
+            accent-color: white; /* Checkbox con color blanco */
+        }
+
+        /* Estilo del botón */
+        .btn-custom {
+            background-color: #03DAC6 !important; 
+            color: black !important;
+            padding: 10px 20px; /* Espaciado interno */
+            font-weight: bold; 
+            
+        }
+
+        .btn-custom:hover {
+            background-color: #03DAC6 !important; 
+            transform: scale(1.05); 
+        }
+    </style>
 </head>
 
 <body>
@@ -14,7 +65,6 @@
     <!-- MENÚ -->
     <div id="contenedorNav"></div>
     <div id="contenedorMenu"></div>
-
 
     <!-- Form de contacto -->
     <div class="container mt-5 mb-5">
@@ -24,15 +74,15 @@
                     <h4 class="text-center mb-5">Acceder a tu cuenta</h4>
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4">
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Ingresa tu email">
                     </div>
                     <div class="col-md-6">
                         <label for="inputPassword4" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="inputPassword4">
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Ingresa tu contraseña">
                     </div>
                     <div class="col-12">
                         <label for="inputAddress" class="form-label">Dirección</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Ingresa tu dirección">
                     </div>
                     <div class="col-12">
                         <label for="inputAddress2" class="form-label">Dirección 2</label>
@@ -40,7 +90,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="inputCity" class="form-label">Ciudad</label>
-                        <input type="text" class="form-control" id="inputCity">
+                        <input type="text" class="form-control" id="inputCity" placeholder="Ingresa tu ciudad">
                     </div>
                     <div class="col-md-6">
                         <label for="inputState" class="form-label">Provincia</label>
@@ -56,7 +106,7 @@
                         </div>
                     </div>
                     <div class="col-12 d-flex justify-content-center">
-                        <button type="submit" class="btn btn-outline-dark">Iniciar Sesión</button>
+                        <button type="submit" class="btn btn-custom">Iniciar Sesión</button>
                     </div>
                 </form>
             </div>
@@ -67,7 +117,7 @@
     <div id="contenedorFooter"></div>
 
     <script type="module" src="./scr/index.js"></script>
-    <SCript src="./js/obtenerProductos.js"></SCript>
+    <script src="./js/obtenerProductos.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
